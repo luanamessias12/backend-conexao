@@ -2,7 +2,7 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
-import { mainRouter } from "./routergs/main"; // ajuste o caminho conforme a estrutura do seu projeto
+import { mainRouter } from "./routers/main";
 
 const server = express();
 
