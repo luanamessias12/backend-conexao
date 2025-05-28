@@ -1,8 +1,8 @@
-
-//Arquivo para rodar o servidor
+// service.ts
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import { mainRouter } from "./routergs/main"; // ajuste o caminho conforme a estrutura do seu projeto
 
 const server = express();
 
@@ -11,10 +11,13 @@ server.use(cors());
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 
-// Rota raiz só para confirmar que o servidor está rodando
+// Rota raiz
 server.get("/", (req, res) => {
   res.send("API está rodando!");
 });
+
+// Usa as rotas da API
+server.use("/api", mainRouter); // prefixo "/api"
 
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
