@@ -7,11 +7,11 @@
   "type": "commonjs",
   "main": "index.js",
   "engines": {
-    "node": "18"
+    "node": ">=20"
   },
   "scripts": {
     "dev": "tsx src/server.ts",
-    "build": "tsup src",
+    "build": "tsc",
     "start": "node dist/server.js"
   },
   "devDependencies": {
