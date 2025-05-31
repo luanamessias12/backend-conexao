@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "tsx src/server.ts",
     "build": "tsc",
+    "postinstall": "prisma generate",
     "start": "node dist/server.js"
   },
   "devDependencies": {
